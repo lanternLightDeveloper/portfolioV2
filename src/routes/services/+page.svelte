@@ -27,7 +27,7 @@
 
 		<article class="price-box">
 			<div class="tier">
-				<h3>Simple 500 - 1000</h3>
+				<h3>Simple $500 - $1000</h3>
 				<p>
 					Perfect for those who know exactly what they need. You provide the vision, including the
 					color scheme, features, and design preferences, and I bring it to life with a static or

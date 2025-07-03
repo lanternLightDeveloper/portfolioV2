@@ -190,7 +190,7 @@
 	}
 
 	.navbar > li {
-		position: relative; /* Necessary for positioning the dropdown */
+		position: relative;
 	}
 
 	.navbar ul li button {
@@ -235,23 +235,13 @@
 		box-shadow: var(--box-Shadow);
 	}
 
-	.current::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 3px;
-		box-shadow: 0 0 2px var(--accent-1);
-	}
-
 	/* Dropdown Menu Styles */
 	.dropdown {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		position: absolute; /* Position relative to parent <li> */
-		top: 100%; /* Aligns the dropdown just below the parent <a> */
+		position: absolute;
+		top: 100%;
 		background-color: var(--bg-1);
 		border: var(--bord);
 		box-shadow: var(--box-Shadow);
@@ -264,7 +254,7 @@
 
 	.dropdown a {
 		padding: var(--size-4);
-		white-space: nowrap; /* Prevents text wrapping */
+		white-space: nowrap;
 	}
 
 	/* Laptop styles */

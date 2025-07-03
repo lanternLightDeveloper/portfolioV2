@@ -4,10 +4,11 @@
 	import RandReci from '$lib/img/food.png';
 	import RandShop from '$lib/img/shoppo.png';
 	import DebtSite from '$lib/img/debtBanner.png';
+	import ThreeDFo from '$lib/img/treedfoli.png';
 </script>
 
 <header class="head_Line">
-	<h1>Completed( or mostly completed) work:</h1>
+	<h1>In progress / Completed work:</h1>
 </header>
 
 <svelte:head>
@@ -28,6 +29,13 @@
 </svelte:head>
 
 <section>
+	<article class="LR_block_l">
+		<img src={ThreeDFo} alt="3D portfolio project screenshot" />
+		<h3>3D Agency page</h3>
+		<p>I am working on this as a 3d agency page.</p>
+		<a class="pulse-button" href="https://threedlight.netlify.app/">Check it out</a>
+	</article>
+
 	<article class="LR_block">
 		<img src={Wsrd} alt="West Sound RD project screenshot" />
 		<h3>West Sound RD (Full stack)</h3>

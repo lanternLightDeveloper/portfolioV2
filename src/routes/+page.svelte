@@ -134,7 +134,7 @@
 <section class="glass-Box-2">
 	<h2>About Me</h2>
 	<p>
-		I’ve spent over six years studying and building websites, including a few years where i
+		I’ve spent over six years studying and building websites, including a few years where I
 		continued at a software company where I learned the layers of project development. Now, I’m
 		focused on putting my skills to work for people who want to make a difference.
 	</p>
