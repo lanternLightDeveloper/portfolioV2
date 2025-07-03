@@ -1,5 +1,4 @@
-
-/* Ripple button  */
+/* Ripple button */
 .ripple-btn {
 	background-color: var(--accent-1);
 	color: var(--txt-2);
@@ -11,17 +10,17 @@
 	cursor: pointer;
 	position: relative;
 
-    &:hover {
-    border: var(--bord);
-	transform: scale(1.05);
-    }
+	&:hover {
+		border: var(--bord);
+		transform: scale(1.05);
 	}
+}
 
 .ripple-btn::after {
 	content: '';
 	position: absolute;
 	background: var(--accent-2);
-    color: var(--bg-1);
+	color: var(--bg-1);
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
@@ -29,54 +28,54 @@
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	opacity: 0;
-	transition:
-		transform 0.5s,
-		opacity 0.5s;
-	}
+	transition: transform 0.5s, opacity 0.5s;
+}
 
 .ripple-btn:active::after {
 	transform: translate(-50%, -50%) scale(1);
 	opacity: 1;
 }
 
-	/* Gradient button */
+/* Gradient button */
 .button-gradient {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+	background: linear-gradient(to right, #ff7e5f, #feb47b);
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 
- /* Shadow button  */
+/* Shadow button */
 .button-shadow {
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    box-shadow: 0 9px #999;
+	background-color: #555555;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 0 9px #999;
 }
+
 .button-shadow:hover {
 	background-color: #3e8e41;
 }
+
 .button-shadow:active {
 	background-color: #3e8e41;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
 
- /* Animated button  */
+/* Animated button */
 .button-animated {
 	background-color: #e7e7e7;
 	color: black;
@@ -90,12 +89,13 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
+
 .button-animated:hover {
 	background-color: #555555;
 	color: white;
 }
 
-/* Ghost button  */
+/* Ghost button */
 .button-Ghost {
 	background-color: transparent;
 	border: 2px solid var(--accent-1);
@@ -107,7 +107,7 @@
 	cursor: pointer;
 }
 
-/* Slant   */
+/* Slant */
 .button-Skew {
 	background-color: var(--accent-1);
 	border: none;
@@ -120,36 +120,37 @@
 	transform: skewX(-20deg);
 }
 
-/* Bouncing  */
+/* Bouncing */
 .pulse-button {
-		background-color: var(--accent-1);
-		border: var(--bord);
-        color:var(--txt-2);
-		padding: var(--size-4);
-		text-align: center;
-        text-decoration: underline;
-		display: inline-block;
-		cursor: pointer;
-        border-radius: var(--rad-Sm);
+	background-color: var(--accent-1);
+	border: var(--bord);
+	color: var(--txt-2);
+	padding: var(--size-4);
+	text-align: center;
+	text-decoration: underline;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: var(--rad-Sm);
 
-		&:hover {
-			background-color: var(--hover);
-			animation: pulse 0.5s infinite;
-		}
+	&:hover {
+		background-color: var(--hover);
+		animation: pulse 0.5s infinite;
 	}
-	@keyframes pulse {
-		0% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: scale(1);
-		}
-	}
+}
 
-	/* Wave  */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Wave */
 .button-Wave {
 	background-color: #3F51B5;
 	border: none;
