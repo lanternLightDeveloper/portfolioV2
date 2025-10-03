@@ -1,192 +1,211 @@
 <script lang="ts">
-	import Twitt from '$lib/svg/birdy.svelte';
-	import Insta from '$lib/svg/insta.svelte';
-	import FaBoo from '$lib/svg/faBoo.svelte';
-
+	import { goto } from '$app/navigation';
+	import { T } from '@threlte/core';
+	import {
+		interactivity,
+		HTML,
+		ImageMaterial,
+		Text3DGeometry,
+		useCursor,
+		Text
+	} from '@threlte/extras';
+	import { DoubleSide } from 'three';
 	import { enhance } from '$app/forms';
 
-	let formSubmitted = false;
+	import EmailIcon from '../Icons/EmailIcon.svelte';
+	import IgIcon from '../Icons/IgIcon.svelte';
+	import BskyIcon from '../Icons/BskyIcon.svelte';
 
+	let formPosition = $state([-26, 8.5]);
+	let formSubmitted = $state(false);
+
+	type Props = {
+		currentContact: number;
+	};
+
+	let { currentContact = $bindable(0) } = $props();
+
+	interactivity();
+
+	const cursor = useCursor('pointer');
 	const handleSubmit = () => {
 		formSubmitted = true;
 	};
+
+	//  🦕  🦖🦖🦖 🦕 🦕  Extras/ Debug 💀= 💣 🌠
 </script>
 
-<svelte:head>
-	<title>Lantern Light Development Contact</title>
-	<meta
-		name="description"
-		content="Welcome to the Lantern Light Development contact page. A great way to reach out."
-	/>
-	<meta name="keywords" content="web development, web design, software development" />
-	<meta property="og:title" content="Lantern Light Development Contact" />
-	<meta
-		property="og:description"
-		content="Welcome to the Lantern Light Development contact page. A great way to reach out."
-	/>
-	<!-- <meta property="og:image" content="$lib/img/backHero29.png" /> -->
-	<meta property="og:url" content="https://www.lanternlightdevelopment.com/" />
-	<meta name="twitter:card" content="$lib/img/backHero29.png" />
-</svelte:head>
+{#if currentContact === 0}
+	<T.Mesh position={[-33, 11, 11]} scale={[0.005, 0.005, 0.005]} rotation={[-0.2, -0.65, -0.11]}>
+		<Text3DGeometry text={'Contact'} />
+		<T.MeshStandardMaterial color="black" />
+	</T.Mesh>
 
-<header class=" head_Line">
-	<h1>Contact:</h1>
-</header>
+	<T.Mesh position={[-33, 10, 11]} scale={[0.005, 0.005, 0.005]} rotation={[-0.2, -0.65, -0.11]}>
+		<Text3DGeometry text={'US'} />
+		<T.MeshStandardMaterial color="black" />
+	</T.Mesh>
 
-<main>
-	<!-- form to submit a message -->
-	<section>
-		{#if !formSubmitted}
-			<form
-				class="classicForm"
-				method="post"
-				action="?/submit"
-				use:enhance={({ formElement, formData, action, cancel }) => {
-					return async ({ result, update }) => {
-						if (result.type === 'success') {
-							handleSubmit();
-							await update();
-						}
-					};
-				}}
-				enctype="multipart/form-data"
-			>
-				<p>Reach out</p>
-				<label for="full_name">Name</label>
-				<input type="text" id="full_name" name="full_name" placeholder="Enter your name" required />
+	<T.Mesh position={[-33, 9, 11]} scale={[0.005, 0.005, 0.005]} rotation={[-0.2, -0.65, -0.11]}>
+		<Text3DGeometry text={'NOW!'} />
+		<T.MeshStandardMaterial color="black" />
+	</T.Mesh>
+{/if}
 
-				<label for="contact_point">Email</label>
-				<input
-					type="text"
-					id="contact_point"
-					name="contact_point"
-					placeholder="Enter your email"
-					required
-				/>
+<!-- IG icon  -->
+<T.Mesh
+	class="igIcon"
+	onclick={() => {
+		currentContact = 1;
+	}}
+	onpointerenter={cursor.onPointerEnter}
+	onpointerleave={cursor.onPointerLeave}
+>
+	<IgIcon />
+</T.Mesh>
 
-				<label for="message">Message</label>
-				<textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+<!-- BluSky icon  -->
+<T.Mesh
+	onclick={() => {
+		currentContact = 2;
+	}}
+	onpointerenter={cursor.onPointerEnter}
+	onpointerleave={cursor.onPointerLeave}
+>
+	<BskyIcon />
+</T.Mesh>
 
-				<button class="ripple-btn" type="submit">Submit</button>
-			</form>
-		{:else}
-			<p class="glass-Box">Thank you for the message! I will get back to you as soon as I can.</p>
-		{/if}
-	</section>
+<!-- Email  -->
+<T.Mesh
+	onclick={() => {
+		currentContact = 3;
+	}}
+	onpointerenter={cursor.onPointerEnter}
+	onpointerleave={cursor.onPointerLeave}
+>
+	<EmailIcon />
+</T.Mesh>
 
-	<section class="follow">
-		<a href="https://bsky.app/profile/soturbulent.bsky.social/"> <svg><Twitt /> </svg></a>
-		<a href="https://www.instagram.com/lanternlightdevelopment/"><svg> <Insta /></svg> </a>
-		<a href="https://www.facebook.com/profile.php?id=100078803221612/"><svg><FaBoo /></svg> </a>
-	</section>
-</main>
+<!-- Instagram  -->
+{#if currentContact === 1}
+	<T.Mesh
+		position={[-33.5, 11.25, 10.5]}
+		scale={[0.005, 0.005, 0.005]}
+		rotation={[-0.2, -0.65, -0.11]}
+	>
+		<Text3DGeometry text={'Visit us on'} />
+		<T.MeshStandardMaterial color="black" />
+	</T.Mesh>
 
+	<T.Mesh position={[-33, 10.5, 11]} scale={[0.005, 0.005, 0.005]} rotation={[-0.2, -0.65, -0.11]}>
+		<Text3DGeometry text={'Instagram'} />
+		<T.MeshStandardMaterial color="white" />
+	</T.Mesh>
+	<T.Mesh
+		position={[-32, 9, 11.8]}
+		scale={[4.8, 2.75]}
+		rotation={[0, -0.723, 0]}
+		onclick={() => {
+			window.open('https://instagram.com/lanternlightdevelopment/', '_blank');
+		}}
+		onpointerenter={cursor.onPointerEnter}
+		onpointerleave={cursor.onPointerLeave}
+	>
+		<T.PlaneGeometry />
+		<ImageMaterial transparent side={DoubleSide} url="uckzAlt.png" />
+	</T.Mesh>
+{/if}
+
+<!-- BluSky  -->
+{#if currentContact === 2}
+	<T.Mesh
+		position={[-33.5, 11.25, 10.5]}
+		scale={[0.005, 0.005, 0.005]}
+		rotation={[-0.2, -0.65, -0.11]}
+	>
+		<Text3DGeometry text={'Visit us on'} />
+		<T.MeshStandardMaterial color="black" />
+	</T.Mesh>
+
+	<T.Mesh
+		position={[-33, 10.5, 11]}
+		scale={[0.005, 0.005, 0.005]}
+		rotation={[-0.2, -0.65, -0.11]}
+		onclick={() => {
+			window.open('https://bsky.app/profile/soturbulent.bsky.social/', '_blank');
+		}}
+		onpointerenter={cursor.onPointerEnter}
+		onpointerleave={cursor.onPointerLeave}
+	>
+		<Text3DGeometry text={'BlueSky'} />
+		<T.MeshStandardMaterial color="blue" />
+	</T.Mesh>
+
+	<T.Mesh
+		position={[-32, 9, 11.8]}
+		scale={[4.8, 2.75]}
+		rotation={[0, -0.723, 0]}
+		onclick={() => {
+			window.open('https://bsky.app/profile/soturbulent.bsky.social/', '_blank');
+		}}
+		onpointerenter={cursor.onPointerEnter}
+		onpointerleave={cursor.onPointerLeave}
+	>
+		<T.PlaneGeometry />
+		<ImageMaterial transparent side={DoubleSide} url="butterfittiAlt.png" />
+	</T.Mesh>
+{/if}
+
+<!-- Email  -->
+{#if currentContact === 3}
+	<T.Mesh position={[-28.5, 7, 7.5]} scale={[1, 1, 1]} rotation={[0, -0.69, 0]}>
+		<HTML position.y={0} transform>
+			{#if !formSubmitted}
+				<form
+					class="classicForm"
+					method="post"
+					action="?/submit"
+					use:enhance={({ formElement, formData, action, cancel }) => {
+						return async ({ result, update }) => {
+							if (result.type === 'success') {
+								handleSubmit();
+								await update();
+							}
+						};
+					}}
+					enctype="multipart/form-data"
+				>
+					<p>Reach out</p>
+					<label for="full_name">Name</label>
+					<input
+						type="text"
+						id="full_name"
+						name="full_name"
+						placeholder="Enter your name"
+						required
+					/>
+
+					<label for="contact_point">Email</label>
+					<input
+						type="text"
+						id="contact_point"
+						name="contact_point"
+						placeholder="Enter your email"
+						required
+					/>
+
+					<label for="message">Message</label>
+					<textarea id="message" name="message" placeholder="Enter your message" required
+					></textarea>
+
+					<button class="ripple-btn" type="submit">Submit</button>
+				</form>
+			{:else}
+				<p class="glass-Box">Thank you for the message! I will get back to you as soon as I can.</p>
+			{/if}
+		</HTML>
+	</T.Mesh>
+{/if}
+
+<!-- 🦕  🦖🦖🦖 🦕 🦕 Styles 💀= 💣 🌠 -->
 <!--svelte-ignore css_unused_selector -->
-<style>
-	@media screen and (min-width: 768px) {
-		p {
-			margin: var(--size-2);
-		}
-	}
-	/* Reflective Follow  */
-	.follow {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: transparent;
-		text-transform: uppercase;
-
-		& a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			padding: var(--size-4);
-			margin: 0 4%;
-			color: var(--txt-1);
-			text-decoration: none;
-			overflow: hidden;
-			transition: var(--ani-Speed);
-			-webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
-		}
-
-		& svg {
-			width: 8vw;
-			height: 8vh;
-		}
-
-		& a:hover {
-			background: #e42886;
-			color: rgb(201, 201, 201);
-			box-shadow: 0 0 50px #e42886;
-			transition-delay: var(--ani-Speed);
-		}
-
-		& a:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 10px;
-			height: 10px;
-			border-top: 2px solid var(--txt-1);
-			border-left: 2px solid var(--txt-1);
-			transition: var(--transit);
-		}
-
-		& a:hover:before {
-			width: 100%;
-			height: 100%;
-			border-top: 2px solid var(--bg-2);
-			border-left: 2px solid var(--bg-2);
-			transition: var(--transit);
-		}
-
-		& a:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: 10px;
-			height: 10px;
-			border-bottom: 2px solid var(--txt-1);
-			border-right: 2px solid var(--txt-1);
-			transition: var(--transit);
-			transition: var(--transit);
-		}
-
-		& a:hover:after {
-			width: 100%;
-			height: 100%;
-			border-bottom: 2px solid var(--bg-2);
-			border-right: 2px solid var(--bg-2);
-			transition: var(--transit);
-		}
-
-		& a:nth-child(1) {
-			filter: hue-rotate(215deg);
-		}
-
-		& a:nth-child(3) {
-			filter: hue-rotate(270deg);
-		}
-
-		@media (min-width: 1024px) {
-			& a {
-				height: 12vh;
-				width: 8vw;
-			}
-
-			& a:before,
-			& a:after {
-				width: 2vw;
-				height: 2vh;
-			}
-
-			& svg {
-				width: 6vw;
-				height: 6vh;
-			}
-		}
-	}
-</style>
