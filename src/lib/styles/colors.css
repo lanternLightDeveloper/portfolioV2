@@ -1,13 +1,13 @@
 
 :root{
-    --bg-1: oklch(7% 0.02 305);  /*Deep black */
-    --bg-2: oklch(31.61% 0.01348 310.812); /* Charcoal gray */
+    --bg-1: oklch(8.874% 0.01568 144.143);  /*Deep black */
+    --bg-2: oklch(32.771% 0.01543 145.324); /* Charcoal gray */
     
     --txt-1: oklch(99% 0.003 95); /* white */
     --txt-2: oklch(99% 0.003 95); /* white */
 
     --accent-1: lch(69.49% 69.74 93.3); /* Gold */
-    --accent-2:  oklch(60.19% 0.17435 147.357); /* Purple*/
+    --accent-2:  oklch(55.731% 0.17757 140.873); /* Green*/
 
     --error:oklch(70% 0.4 333); /* Pink bright  */
 
@@ -23,14 +23,12 @@
 
     @media (prefers-color-scheme: light)   {
         --bg-1: oklch(99% 0.003 305); /* Soft white */
-        --bg-2: oklch(92% 0.03 305); /* Subtle off-white */
-        --txt-1: oklch(7% 0.02 305);  /*Deep black */
-        --txt-2: oklch(99% 0.003 305); /* Soft white */
-        --accent-1:  oklch(60.19% 0.17435 147.357); /* Purple*/
+        --bg-2: oklch(95.044% 0.03424 142.761); /* Subtle off-white */
+        --txt-1:oklch(8.874% 0.01568 144.143);  /*Deep black */
+        --txt-2: oklch(32.771% 0.01543 145.324); /* Charcoal gray */
+        
+        --accent-1:  oklch(55.731% 0.17757 140.873); /* Green*/
         --accent-2: lch(86.93% 87.16 91.27); /* Gold */
-    
-        --gradient: linear-gradient(to bottom,var(--bg-1), var(--bg-1),  color-mix(in srgb, var(--bg-1) 90%, var(--accent-1) 10%),var(--accent-1));
-        --gradientFlip:linear-gradient(0deg,var(--bg-1), var(--bg-1),  color-mix(in srgb, var(--bg-1) 90%, var(--accent-1) 10%),var(--accent-1));
     
         /* Interactive States */
         --hover: color-mix(in oklch, var(--accent-1) 80%, white 20%);

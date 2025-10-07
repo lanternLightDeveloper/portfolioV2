@@ -39,8 +39,7 @@ h3 {
 }
 
 p {
-	font-size: var(--size-5);
-	text-shadow: var(--text-Shadow);
+	font-size: var(--size-5); 
 }
 
 img {
