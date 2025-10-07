@@ -56,7 +56,7 @@
 		property="og:description"
 		content="Welcome to the Lantern Light Development  homepage. Seeking to help people the way they want."
 	/>
-	<meta property="og:image" content="$lib/img/backHero29.png" />
+	<meta property="og:image" content="$lib/img/backHero443.png" />
 	<meta property="og:url" content="https://www.lanternlightdevelopment.com/" />
 	<meta name="twitter:card" content="$lib/img/backHero29.png" />
 </svelte:head>
@@ -196,7 +196,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-		background-image: url('$lib/img/backHero27.png');
+		background-image: url('$lib/img/backHero443.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
