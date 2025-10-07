@@ -43,6 +43,115 @@
 	</p>
 
 	<img src={Nature1} alt="a sunny day on top of a mountain at a lake. It is serene" />
+
+	<p>And a more resume version of myself</p>
+
+	<section id="about">
+		<p>
+			Resilient developer with 5+ years of experience in front-end design and full stack
+			development. Known for strong teamwork, communication, and problem-solving. Passionate about
+			building collaborative environments and refining tools that minimize time to market.
+		</p>
+	</section>
+
+	<section id="contact">
+		<h2>Contact</h2>
+		<ul>
+			<li>Email: <a href="mailto:Joelkrivers@yahoo.com">Joelkrivers@yahoo.com</a></li>
+			<li>
+				Website: <a href="https://lanternlightdevelopment.com" target="_blank"
+					>Lanternlightdevelopment.com</a
+				>
+			</li>
+			<li>
+				GitHub: <a href="https://github.com/Lanternlightdeveloper" target="_blank"
+					>Lanternlightdeveloper</a
+				>
+			</li>
+		</ul>
+	</section>
+
+	<section id="work-history">
+		<h2>Work History</h2>
+		<article>
+			<h3>DebtNet (Dec 2021 - Jun 2025)</h3>
+			<ul>
+				<li>SQL database management for clients</li>
+				<li>Front-end design and SaaS model development for Windows</li>
+				<li>Software issue resolution and client support</li>
+				<li>API integration and troubleshooting</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Sales (Oct 2018 - 2021)</h3>
+			<ul>
+				<li>Customer needs assessment and solution delivery</li>
+				<li>Business-to-business and retail sales experience</li>
+				<li>Built trust through effective communication</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Culinary (2014 - 2021)</h3>
+			<ul>
+				<li>Created sucess from scratch in a fast-paced kitchen</li>
+				<li>Gained experience in diverse cooking styles</li>
+				<li>Learned to work under pressure in team based enviroments</li>
+			</ul>
+		</article>
+	</section>
+
+	<section id="skills">
+		<h2>Languages & Tools</h2>
+		<ul>
+			<li>Svelte</li>
+			<li>HTML/CSS</li>
+			<li>JavaScript</li>
+			<li>SQL</li>
+			<li>React</li>
+			<li>Three.js</li>
+			<li>Git</li>
+			<li>Node.js</li>
+			<li>Figma</li>
+		</ul>
+	</section>
+
+	<section id="traits">
+		<h2>Traits</h2>
+		<ul>
+			<li>Kindness</li>
+			<li>Dependability</li>
+			<li>Communication</li>
+			<li>Problem-solving</li>
+			<li>Resourcefulness</li>
+		</ul>
+	</section>
+
+	<section id="projects">
+		<h2>Projects</h2>
+		<ul>
+			<li>
+				<strong>Lanternlightdevelopment.com</strong> - Portfolio site built with Svelte
+			</li>
+			<li>
+				<strong><a href="https://threedlight.netlify.app"> Threedlight.netlify.app </a></strong> - 3d
+				website built with Threlte using Blender assets
+			</li>
+			<li>
+				<strong><a href="https://table-tango.netlify.app/"> Table Tango </a></strong> - Random recipe
+				generator
+			</li>
+		</ul>
+	</section>
+
+	<section id="goals">
+		<h2>Goals</h2>
+		<ul>
+			<li>Continue refining development skills</li>
+			<li>Minimize time to market for new tools</li>
+			<li>Build collaborative, creative environments</li>
+			<li>Explore productive solutions through teamwork</li>
+		</ul>
+	</section>
 </main>
 
 <!--svelte-ignore css_unused_selector -->
@@ -50,6 +159,10 @@
 	img {
 		width: 60%;
 		margin: 0 20%;
+	}
+
+	ul {
+		margin-left: 10%;
 	}
 
 	/* Tablet Size */
