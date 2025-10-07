@@ -7,7 +7,7 @@
     --txt-2: oklch(99% 0.003 95); /* white */
 
     --accent-1: lch(69.49% 69.74 93.3); /* Gold */
-    --accent-2:  oklch(40% 0.2 305); /* Purple*/
+    --accent-2:  oklch(60.19% 0.17435 147.357); /* Purple*/
 
     --error:oklch(70% 0.4 333); /* Pink bright  */
 
@@ -26,7 +26,7 @@
         --bg-2: oklch(92% 0.03 305); /* Subtle off-white */
         --txt-1: oklch(7% 0.02 305);  /*Deep black */
         --txt-2: oklch(99% 0.003 305); /* Soft white */
-        --accent-1:  oklch(40% 0.2 305); /* Purple*/
+        --accent-1:  oklch(60.19% 0.17435 147.357); /* Purple*/
         --accent-2: lch(86.93% 87.16 91.27); /* Gold */
     
         --gradient: linear-gradient(to bottom,var(--bg-1), var(--bg-1),  color-mix(in srgb, var(--bg-1) 90%, var(--accent-1) 10%),var(--accent-1));
