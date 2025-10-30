@@ -1,7 +1,8 @@
 <script>
-	import Wsrd from '$lib/img/wsrd.png';
-	import ArtCount from '$lib/img/artCountV4.png';
+	import FairSite from '$lib/img/fairSite.png';
+	import TreeDfolio from '$lib/img/treedfoli.png';
 	import RandReci from '$lib/img/food.png';
+	import ItsMe from '$lib/img/myFace.jpg';
 	import { enhance } from '$app/forms';
 	import { onDestroy } from 'svelte';
 
@@ -73,7 +74,6 @@
 		<p>the way YOU want</p>
 	</section>
 
-	<!-- form to submit a message -->
 	<section class="banner-form">
 		{#if !formSubmitted}
 			<form
@@ -114,82 +114,82 @@
 	</section>
 </header>
 
-<section>
-	<h2>Your Partner in Making a Difference</h2>
+<main id="main-content" class="grid-Main">
+	<section class="grid-Block-Double">
+		<h2>Your Partner in Making a Difference</h2>
 
-	<p>
-		There are so many options when it comes to web development, and it can feel overwhelming. I'm
-		here to make it easier. I believe in offering fair, accessible pricing, and I'm committed to
-		support to those who need it. My goal is simple: to give you the tools you need to succeed, no
-		matter your starting point.
-	</p>
-	<a href="/contact/" class="contact button-Ghost">Reach out</a>
-	<ul class="marg_Also">
-		Hours of Operation:
-		<li>Monday-Friday: 7:30am-6pm (Pst)</li>
-		<li>Saturday & Sunday: Closed</li>
-	</ul>
-</section>
-
-<section class="glass-Box-2">
-	<h2>About Me</h2>
-	<p>
-		I’ve spent over six years studying and building websites, including a few years where I
-		continued at a software company where I learned the layers of project development. Now, I’m
-		focused on putting my skills to work for people who want to make a difference.
-	</p>
-</section>
-
-<section>
-	<h2>Why would I do this?</h2>
-	<p>
-		I believe in helping people who are working to create a better world. Nonprofits and small
-		companies often operate on tight constraints to achieve big dreams—I’m here to be an asset in
-		reaching those goals.
-	</p>
-</section>
-
-<section>
-	<h2>Check out some of my projects:</h2>
-	<article class="LR_block">
-		<img src={Wsrd} alt="West Sound RD project screenshot" />
-		<h3>West Sound RD (Full stack)</h3>
 		<p>
-			This project marked a big step forward in both complexity and refinement, expanding on
-			previous ideas of managing and interacting with website content directly from the page.
+			Thank you for visiting. There are so many options when it comes to web development, and it can
+			feel overwhelming. I'm here to make it easier. I believe in offering fair, accessible pricing,
+			and I'm committed to support to those who need it. My goal is simple: to give you the tools
+			you need to succeed, no matter your starting point.
 		</p>
-		<a class="pulse-button" href="https://westsoundrd2.netlify.app/">Check it out</a>
-		<a class="pulse-button" href="/reviews/wsrd">Read about this project</a>
-	</article>
+		<a href="/contact/" class="contact button-Ghost">Reach out</a>
+		<ul>
+			<!-- This could be a 3d neon sign with an open/closed feature -->
+			Hours of Operation:
+			<li>Monday-Friday: 7:30am-6pm (Pst)</li>
+			<li>Saturday & Sunday: Closed</li>
+		</ul>
+	</section>
 
-	<article class="LR_block_l">
-		<img src={ArtCount} alt="3D counter-top store project screenshot" />
-		<h3>3D counter-top store (3D)</h3>
+	<section class="box-Contrast grid-Block-Double">
+		<h2>Why would I do this?</h2>
 		<p>
-			I took a course on building 3D websites. This was a way for me to start to understand the
-			concepts.
+			I believe in helping people who are working to create a better world. Nonprofits and small
+			companies often operate on tight constraints to achieve big dreams. I’m here to be an asset in
+			reaching the goals you deserve.
 		</p>
-		<a class="pulse-button" href="https://artisan-countertop-v4.netlify.app/">Check it out</a>
-	</article>
+	</section>
 
-	<article class="LR_block">
+	<section class="grid-Block-Double">
+		<img src={ItsMe} alt="its my face" />
+
+		<h2>About Me</h2>
+		<p>
+			I’ve spent over seven years studying and building websites, including the last few years where
+			I worked at a software company learing the layers of project development. Now, I’m focused on
+			putting my skills to work for people who want to make a difference in their curent life.
+		</p>
+
+		<p>Click <a href="/about/">here</a> to learn more about me.</p>
+	</section>
+
+	<h2 class="grid-Block-Double">Check out some of my projects:</h2>
+	<section>
+		<img src={FairSite} alt="Kitsap County Fair project screenshot" />
+		<h3>County Fair</h3>
+		<p>
+			This is a project I used for getting up to date with different styling updates and data
+			techniques.
+		</p>
+		<a class="pulse-button" href="https://newfaircity.netlify.app/">Check it out</a>
+		<a class="pulse-button" href="/Projects/NewFairCity/">Read about this project</a>
+	</section>
+
+	<section class="right-Align">
+		<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
+		<h3>3D Portfolio Website</h3>
+		<p>
+			I spent some time building this websites replacement in 3d. It is fully functioning. There are
+			just a few things to work out.
+		</p>
+		<a class="pulse-button" href="https://threedlight.netlify.app/">Check it out</a>
+	</section>
+
+	<section>
 		<img src={RandReci} alt="Table Tango project screenshot" />
-		<h3>Table Tango (API calling)</h3>
+		<h3>Table Tango</h3>
 		<p>
-			I got tired of trying to figure out dinner. So I made a random recipe generator to get better
-			at learning how to display fetched data.
+			I got tired of trying to figure out dinner. So I made a random meal generator to get better at
+			learning how to display fetched data.
 		</p>
 		<a class="pulse-button" href="https://table-tango.netlify.app/">Check it out</a>
-	</article>
-</section>
-
-<ender>
-	<p>And if you are curious, you can click <a href="/about/">here</a> to learn about me</p>
-</ender>
+	</section>
+</main>
 
 <!--svelte-ignore css_unused_selector -->
 <style>
-	/* entry banner */
 	header {
 		position: relative;
 		height: 100vh;
@@ -263,22 +263,6 @@
 
 		@media screen and (min-width: 768px) {
 			margin: var(--space-Side);
-		}
-	}
-
-	.glass-Box-2 {
-		height: 50vh;
-
-		& h2 {
-			padding-top: 20%;
-
-			@media screen and (min-width: 768px) {
-				padding-top: 5%;
-			}
-		}
-
-		@media screen and (min-width: 1024px) {
-			height: 75vh;
 		}
 	}
 
