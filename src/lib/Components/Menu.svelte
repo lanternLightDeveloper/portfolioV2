@@ -32,9 +32,7 @@
 
 <div>
 	<button class="center-toggle" onclick={() => (isMenuOpen = !isMenuOpen)} aria-label="Toggle menu">
-		<div class="burger">
-			<svg> <Logo_Svg /></svg>
-		</div>
+		<svg> <Logo_Svg /></svg>
 	</button>
 
 	{#if isMenuOpen}
@@ -67,11 +65,11 @@
 <style>
 	.center-toggle {
 		position: fixed;
-		top: 1rem;
-		right: 1rem;
+		top: 0.5rem;
+		right: 0.5rem;
 		z-index: 960;
-		width: 3rem;
-		height: 3rem;
+		width: 4rem;
+		height: 4rem;
 		border-radius: 50%;
 		background: rgba(21, 48, 20, 0.5);
 		backdrop-filter: blur(12px);
@@ -80,7 +78,13 @@
 		transition:
 			transform 0.3s ease,
 			background 0.3s ease;
+
+		svg {
+			width: 90%;
+			height: 90%;
+		}
 	}
+
 	.center-toggle:hover {
 		transform: scale(1.1);
 		background: rgba(255, 255, 255, 0.25);
@@ -102,14 +106,6 @@
 		z-index: 950;
 		overflow: hidden;
 		animation: fadeIn 0.4s ease-in-out forwards;
-	}
-
-	.burger {
-		& svg {
-			width: var(--size-8);
-			height: var(--size-8);
-			border-radius: 50%;
-		}
 	}
 
 	.menu-content {
