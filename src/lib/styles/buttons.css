@@ -125,7 +125,7 @@
 	background-color: var(--accent-1);
 	border: var(--bord);
 	color: var(--txt-2);
-	padding: var(--size-4);
+	padding: var(--size-4); 
 	text-align: center;
 	text-decoration: underline;
 	display: inline-block;
