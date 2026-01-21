@@ -1,0 +1,159 @@
+/* Components are parts like alert boxes, cards or modals to be used in or with grids or solitary points  */
+	/* 🦕  🦖🦖🦖 🦕 🦕 Components 💀= 💣 🌠 */
+
+/* Headline */
+.head_Line {
+	position: relative;
+	width: fit-content;
+	margin: var(--space-Full-X);
+	padding: var(--size-4);
+	background: var(--accent-2);
+	border: var(--bord);
+	border-radius: var(--rad-Sm);
+	font-family: var(--font-Alt);
+
+	& h1 {
+		all: unset;
+		font-size: var(--size-6);
+		text-transform: capitalize;
+	}
+}
+
+/* Boxes */
+.glass-Box {
+	background: var(--hallow-Accent);
+	backdrop-filter: blur(10px);
+	--webkit-backdrop-filter: blur(1.5px);
+}
+
+.glass-Box-2 {
+	background: var(--bg-2);
+	backdrop-filter: blur(5px);
+	--webkit-backdrop-filter: blur(1px);
+}
+
+.block-List{
+		border: var(--bord);
+		border-radius: var(--rad-Sm);
+		background:var(--gradient);
+		justify-content: space-between;
+		margin: 1rem 5vw; 
+
+	& p {
+		border-bottom: 1px dashed var(--border-color);  
+	}	
+			
+	& :last-child {
+		border-bottom: none;
+	}
+
+	h4 { 
+		text-align: center;
+		margin: 0;
+		padding: var(--size-4); 
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+
+    @media (prefers-color-scheme: light)   { 
+		color: var(--bg-1);
+    }
+	}
+
+	@media only screen and (min-width: 768px) { 
+		height: fit-content; 
+		width: 70%;
+		margin: 5vh 15vw;
+		& h2 {
+			margin: var(--size-4); 
+		}
+	} 
+
+	@media only screen and (min-width: 1024px) { 
+		width: 60%;
+		margin: 5vh 20vw;
+
+		h3, p {
+			margin: 0;
+			padding: var(--size-4);
+		}
+	}
+}
+
+
+/* Form style */
+.classicForm {
+	display: flex;
+	flex-direction: column;
+	background: var(--hallow-Accent);
+	width: 80%;
+	max-width: 80vw;
+	padding: var(--size-7);
+	margin: 5vh auto;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: var(--rad-Sm);
+	box-shadow: var(--box-Shadow);
+	backdrop-filter: blur(10px);
+	gap: var(--size-4);
+
+	& label,
+	p,
+	button {
+		font-size: var(--size-5);
+		font-weight: 500;
+	}
+
+	& input,
+	textarea {
+		width: 80%;
+		padding: var(--size-3);
+		background: var(--bg-1);
+		color: var(--txt-1);
+		border: var(--bord);
+		border-radius: var(--rad-Sm);
+		transition: var(--transit);
+	}
+
+	& input:focus,
+	textarea:focus {
+		background: var(--color-active);
+		color: var(--txt-2);
+	}
+}
+
+/* Opacity for depth */
+.gradient-bg-depth {
+	background: linear-gradient(
+		135deg,
+		rgba(255, 0, 0, var(--op-M)),
+		rgba(0, 0, 255, var(--op-L))
+	);
+	height: 100px;
+	width: 100px;
+}
+
+/* Property */
+@property --rotation {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes rotate {
+	from {
+		--rotation: 0deg;
+	}
+	to {
+		--rotation: 360deg;
+	}
+}
+
+/* Add easing */
+.testBox {
+	animation: rotate var(--ani-Speed-Long) linear infinite;
+	transform: rotate(var(--rotation));
+	background-color: var(--accent-1);
+	width: 200px;
+	height: 200px;
+}
