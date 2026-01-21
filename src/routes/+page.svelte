@@ -65,7 +65,7 @@
 <!--welcome info-->
 
 <header id="hero-banner" class="hero-banner">
-	<h1 class="banner-text">Lantern Light Development</h1>
+	<h1 class="banner-text">Lantern Light Development (TEST)</h1>
 
 	<section class="banner-phrase glass-Box">
 		<p class="phrase">
