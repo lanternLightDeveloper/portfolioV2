@@ -1,9 +1,6 @@
 <script lang="ts">
 	let { data } = $props();
 	let { user, profiles } = $derived(data);
-
-	$inspect(profiles);
-
 	let showMessageBox = $state(false);
 	let showViewed = $state(false);
 	let showFood = $state(false);

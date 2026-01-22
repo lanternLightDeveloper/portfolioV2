@@ -15,12 +15,9 @@ export const load: LayoutServerLoad = async ({ fetch, cookies }) => {
 		}
 	});
 
-	const {
-		data: { session }
-	} = await supabase.auth.getSession();
-	const {
-		data: { user }
-	} = await supabase.auth.getUser();
+const { data: { user } } = await supabase.auth.getUser();
 
-	return { session, user };
+return { user };
 };
+
+
