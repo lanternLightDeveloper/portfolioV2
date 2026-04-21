@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	import '$lib/styles/baseCamp.svelte';
+	import '$lib/Styles/baseCamp.svelte';
 	import Header from '$lib/Components/Menu.svelte';
+	import Footer from '$lib/Components/Footer.svelte';
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
 
@@ -24,5 +25,5 @@
 	<main>
 		{@render children()}
 	</main>
-	<!-- <Footer />  -->
+	<Footer />
 </div>

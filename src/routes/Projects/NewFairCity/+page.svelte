@@ -87,7 +87,7 @@
 	img {
 		width: 50vw;
 		margin: var(--space-Side);
-		border: var(--bord);
+		border: var(--border);
 
 		@media screen and (min-width: 1440px) {
 			width: 30vw;

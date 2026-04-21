@@ -68,7 +68,7 @@
 			previous ideas of managing and interacting with website content directly from the page.
 		</p>
 		<a class="pulse-button" href="https://westsoundrd2.netlify.app/">Check it out</a>
-		<a class="pulse-button" href="/reviews/wsrd">Read about this project</a>
+		<a class="pulse-button" href="/wsrd">Read about this project</a>
 	</section>
 
 	<section>
@@ -88,5 +88,3 @@
 		<a class="pulse-button" href="https://sky-high-shop-test.netlify.app/">Check it out</a>
 	</section>
 </main>
-
-<!--svelte-ignore css_unused_selector -->

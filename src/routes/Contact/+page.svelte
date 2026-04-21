@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Twitt from '$lib/svg/birdy.svelte'
-	import Insta from '$lib/svg/insta.svelte'
-	import FaBoo from '$lib/svg/faBoo.svelte'
+	import Twitt from '$lib/svg/birdy.svelte';
+	import Insta from '$lib/svg/insta.svelte';
+	import FaBoo from '$lib/svg/faBoo.svelte';
 
-	import { enhance } from '$app/forms'
+	import { enhance } from '$app/forms';
 
-	let formSubmitted = false
+	let formSubmitted = false;
 
 	const handleSubmit = () => {
-		formSubmitted = true
-	}
+		formSubmitted = true;
+	};
 </script>
 
 <svelte:head>
@@ -43,10 +43,10 @@
 			use:enhance={({ formElement, formData, action, cancel }) => {
 				return async ({ result, update }) => {
 					if (result.type === 'success') {
-						handleSubmit()
-						await update()
+						handleSubmit();
+						await update();
 					}
-				}
+				};
 			}}
 			enctype="multipart/form-data"
 		>
@@ -78,7 +78,6 @@
 	</section>
 </main>
 
-<!--svelte-ignore css-unused-selector -->
 <style>
 	/* Reflective Follow  */
 	.follow {
@@ -98,7 +97,7 @@
 			color: var(--txt-1);
 			text-decoration: none;
 			overflow: hidden;
-			transition: var(--ani-Speed);
+			transition: var(--animation-Speed);
 			-webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
 		}
 
@@ -111,7 +110,7 @@
 			background: #e42886;
 			color: rgb(201, 201, 201);
 			box-shadow: 0 0 50px #e42886;
-			transition-delay: var(--ani-Speed);
+			transition-delay: var(--animation-Speed);
 		}
 
 		& a:before {

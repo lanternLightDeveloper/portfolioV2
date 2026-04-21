@@ -30,7 +30,7 @@
 		bottom: 0;
 		width: 100vw;
 		height: 5vh;
-		padding: var(--space-Sm);
+		padding: var(--space-S);
 
 		& a {
 			color: var(--txt-1);

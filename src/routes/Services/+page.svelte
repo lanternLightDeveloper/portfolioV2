@@ -12,11 +12,10 @@
 	<!-- <meta name="twitter:card" content="$lib/img/backHero29.png" /> -->
 </svelte:head>
 
-<header class="head_Line">
-	<h1>Services:</h1>
-</header>
+<header class="head_Line"></header>
 
 <main>
+	<h1>Services:</h1>
 	<h2>Pricing Tiers</h2>
 	<p>
 		Every project is unique, and pricing varies based on scope and complexity. My goal is to deliver

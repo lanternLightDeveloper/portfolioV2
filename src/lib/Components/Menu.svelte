@@ -9,7 +9,8 @@
 		{ label: 'Contact', href: '/Contact', id: 2 },
 		{ label: 'Services', href: '/Services', id: 3 },
 		{ label: 'Projects', href: '/Projects', id: 4 },
-		{ label: 'About ', href: '/About', id: 5 }
+		{ label: 'About ', href: '/About', id: 5 },
+		{ label: 'Cv', href: '/Cv', id: 6 }
 	];
 
 	let showScrollButton = $state(false);
@@ -38,7 +39,7 @@
 	{#if isMenuOpen}
 		<div class="menu-overlay">
 			<div class="menu-content">
-				{#each menuItems as item, i}
+				{#each menuItems as item, i (item.id)}
 					<a
 						href={item.href}
 						class="menu-link"
@@ -61,7 +62,6 @@
 	<button class="scroll-top-button" onclick={scrollToTop}> ↑ </button>
 {/if}
 
-<!--svelte-ignore css_unused_selector -->
 <style>
 	.center-toggle {
 		position: fixed;
@@ -73,7 +73,7 @@
 		border-radius: 50%;
 		background: rgba(21, 48, 20, 0.5);
 		backdrop-filter: blur(12px);
-		border: var(--bord);
+		border: var(--border);
 		cursor: pointer;
 		transition:
 			transform 0.3s ease,
@@ -81,13 +81,14 @@
 
 		svg {
 			width: 90%;
-			height: 90%;
+			margin: -3vh 0 0 1.5vw;
+			padding: 0;
 		}
 	}
 
 	.center-toggle:hover {
 		transform: scale(1.1);
-		background: rgba(255, 255, 255, 0.25);
+		background: var(--hover);
 	}
 
 	.menu-overlay {

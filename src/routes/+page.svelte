@@ -43,6 +43,12 @@
 	const handleSubmit = () => {
 		formSubmitted = true;
 	};
+
+	let isMenuOpen = $state(false);
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
 </script>
 
 <svelte:head>
@@ -62,10 +68,8 @@
 	<meta name="twitter:card" content="$lib/img/backHero29.png" />
 </svelte:head>
 
-<!--welcome info-->
-
 <header id="hero-banner" class="hero-banner">
-	<h1 class="banner-text">Lantern Light Development </h1>
+	<h1 class="banner-text">Lantern Light Development</h1>
 
 	<section class="banner-phrase glass-Box">
 		<p class="phrase">
@@ -106,7 +110,7 @@
 				<label for="message">Message</label>
 				<textarea id="message" name="message" placeholder="Enter your message" required></textarea>
 
-				<button class="ripple-btn" type="submit">Submit</button>
+				<button class="btn-Shadow" type="submit">Submit</button>
 			</form>
 		{:else}
 			<p class="glass-Box">Thank you for the message! I will get back to you as soon as I can.</p>
@@ -117,14 +121,13 @@
 <main id="main-content" class="grid-Main">
 	<section class="grid-Block-Double">
 		<h2>Your Partner in Making a Difference</h2>
-
 		<p>
 			Thank you for visiting. There are so many options when it comes to web development, and it can
 			feel overwhelming. I'm here to make it easier. I believe in offering fair, accessible pricing,
 			and I'm committed to support to those who need it. My goal is simple: to give you the tools
 			you need to succeed, no matter your starting point.
 		</p>
-		<a href="/contact/" class="contact button-Ghost">Reach out</a>
+		<a href="/Contact" class="contact button-Ghost">Reach out</a>
 		<ul>
 			<!-- This could be a 3d neon sign with an open/closed feature -->
 			Hours of Operation:
@@ -142,53 +145,145 @@
 		</p>
 	</section>
 
-	<section class="grid-Block-Double">
-		<img src={ItsMe} alt="its my face" />
-
-		<h2>About Me</h2>
-		<p>
-			I’ve spent over seven years studying and building websites, including the last few years where
-			I worked at a software company learing the layers of project development. Now, I’m focused on
-			putting my skills to work for people who want to make a difference in their curent life.
-		</p>
-
-		<p>Click <a href="/about/">here</a> to learn more about me.</p>
-	</section>
-
-	<h2 class="grid-Block-Double">Check out some of my projects:</h2>
 	<section>
-		<img src={FairSite} alt="Kitsap County Fair project screenshot" />
-		<h3>County Fair</h3>
+		<h2>Services:</h2>
 		<p>
-			This is a project I used for getting up to date with different styling updates and data
-			techniques.
+			Every project is unique, and pricing varies based on scope and complexity. My goal is to
+			deliver exceptional results while keeping costs fair and equitable. All projects come with a
+			free year of support to ensure your website stays up and running.
 		</p>
-		<a class="pulse-button" href="https://newfaircity.netlify.app/">Check it out</a>
-		<a class="pulse-button" href="/Projects/NewFairCity/">Read about this project</a>
-	</section>
+		<button
+			class="btn-Ghost"
+			style="margin: 1rem 12%;"
+			onclick={toggleMenu}
+			onkeydown={() => (isMenuOpen = false)}
+		>
+			{isMenuOpen ? 'Less' : 'More'}
+		</button>
+		<div class:open={isMenuOpen}>
+			{#if isMenuOpen}
+				<section>
+					<h2>Pricing Tiers</h2>
 
-	<section class="right-Align">
-		<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
-		<h3>3D Portfolio Website</h3>
-		<p>
-			I spent some time building this websites replacement in 3d. It is fully functioning. There are
-			just a few things to work out.
-		</p>
-		<a class="pulse-button" href="https://threedlight.netlify.app/">Check it out</a>
-	</section>
+					<h3>Simple $500 - $1000</h3>
+					<p>
+						Perfect for those who know exactly what they need. You provide the vision, including the
+						color scheme, features, and design preferences, and I bring it to life with a static or
+						lightly functional website.
+					</p>
 
-	<section>
-		<img src={RandReci} alt="Table Tango project screenshot" />
-		<h3>Table Tango</h3>
-		<p>
-			I got tired of trying to figure out dinner. So I made a random meal generator to get better at
-			learning how to display fetched data.
-		</p>
-		<a class="pulse-button" href="https://table-tango.netlify.app/">Check it out</a>
+					<h3>Moderate $1000 - $3000</h3>
+					<p>
+						Ideal if you have a general idea but need some guidance to shape your vision. Together,
+						we’ll refine your ideas into a cohesive, functional website. This is going to be more
+						than just a static page.
+					</p>
+
+					<h3>"I’ll Handle It" $4000+</h3>
+					<p>
+						For when you have a jumble of brilliant ideas but need someone to make them happen.
+						We’ll collaborate to turn your concepts into a polished, professional site. This can be
+						complex and include E-commerce or CMS services.
+					</p>
+				</section>
+
+				<section>
+					<h2>Service plan</h2>
+					<p>
+						Your first year of support is free. Any hiccups, issues, small changes or updates are
+						covered.
+						<br />
+						<br />
+						After the first year you can subscribe to either 6 month plan or 1 year.
+					</p>
+					<p>6 months is $275 1 year is $500</p>
+				</section>
+
+				<section>
+					<h2>How It Works</h2>
+					<p>
+						I follow a structured process to ensure your project is completed efficiently and to the
+						highest standard. Here's what to expect:
+					</p>
+					<p>
+						<strong>Planning:</strong> We’ll discuss your goals, brainstorm ideas, and create a clear
+						plan for your website.
+					</p>
+					<p>
+						<strong>Design:</strong> I’ll craft a layout, color palette, and design that reflect your
+						brand and message.
+					</p>
+					<p>
+						<strong>Development:</strong> Your website will be built from the ground up, tailored to
+						your specifications.
+					</p>
+					<p>
+						<strong>Testing:</strong> Every detail will be tested across different devices and browsers
+						to ensure it works seamlessly.
+					</p>
+					<p>
+						<strong>Deployment:</strong> Your website goes live and is ready to make an impact!
+					</p>
+					<p>
+						<strong>Support:</strong> Enjoy free support for the first year to address any unforeseen
+						issues or updates.
+					</p>
+					<p>
+						<strong>Management:</strong> Take it further with advanced features like analytics, tracking,
+						and audience engagement tools.
+					</p>
+				</section>
+			{/if}
+		</div>
+
+		<section class="grid-Block-Double">
+			<img src={ItsMe} alt="its my face" class="face" />
+
+			<h2>About Me</h2>
+			<p>
+				I’ve spent over seven years studying and building websites, including the last few years
+				where I worked at a software company learing the layers of project development. Now, I’m
+				focused on putting my skills to work for people who want to make a difference in their
+				curent life.
+			</p>
+
+			<p>Click <a href="/About">here</a> to learn more about me.</p>
+		</section>
+
+		<h2 class="grid-Block-Double">Check out some of my projects:</h2>
+		<section class=" projects">
+			<img src={FairSite} alt="Kitsap County Fair project screenshot" />
+			<h4>County Fair</h4>
+			<p>
+				This is a project I used for getting up to date with different styling updates and data
+				techniques.
+			</p>
+			<a class="btn-Pulse" href="https://newfaircity.netlify.app/">Check it out</a>
+			<a class="btn-Pulse" href="/Projects/NewFairCity/">Read about this project</a>
+		</section>
+
+		<section class="right-Align projects">
+			<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
+			<h4>3D Portfolio Website</h4>
+			<p>
+				I spent some time building this websites replacement in 3d. It is fully functioning. There
+				are just a few things to work out.
+			</p>
+			<a class="btn-Pulse" href="https://threedlight.netlify.app/">Check it out</a>
+		</section>
+
+		<section class=" projects">
+			<img src={RandReci} alt="Table Tango project screenshot" />
+			<h4>Table Tango</h4>
+			<p>
+				I got tired of trying to figure out dinner. So I made a random meal generator to get better
+				at learning how to display fetched data.
+			</p>
+			<a class="btn-Pulse" href="https://table-tango.netlify.app/">Check it out</a>
+		</section>
 	</section>
 </main>
 
-<!--svelte-ignore css_unused_selector -->
 <style>
 	header {
 		position: relative;
@@ -196,7 +291,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-		background-image: url('$lib/img/backHero443.png');
+		background-image: url('$lib/img/backHero2.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
@@ -213,14 +308,14 @@
 
 	.banner-phrase {
 		display: grid;
-		border-radius: var(--rad-Sm);
+		border-radius: var(--radius-S);
 		align-self: center;
 		justify-self: center;
 		box-shadow: var(--box-Shadow);
 
 		& p {
 			font-size: var(--size-7);
-			padding: var(--space-Sm);
+			padding: var(--space-S);
 			margin: 0;
 		}
 	}
@@ -254,18 +349,43 @@
 
 	.banner-form {
 		& p {
-			margin: var(--space-Sm);
+			margin: var(--space-S);
 		}
 	}
 
 	.contact {
-		margin: var(--space-Med);
+		margin: var(--space-M);
 
 		@media screen and (min-width: 768px) {
 			margin: var(--space-Side);
 		}
 	}
 
+	.projects {
+		border-top: var(--border);
+		border-bottom: var(--border);
+		min-height: 25vh;
+		margin-bottom: 5vh;
+
+		h4 {
+			border-bottom: var(--border);
+			width: fit-content;
+		}
+
+		a {
+			margin: var(--size-4);
+		}
+
+		img {
+			margin-bottom: -10vh;
+		}
+	}
+
+	.face {
+		width: 60vw;
+		margin-left: 20vw;
+		margin-bottom: -15vh;
+	}
 	/* Tablet  SIze  */
 	@media only screen and (min-width: 766px) {
 		header {
@@ -275,7 +395,7 @@
 
 		.banner-text {
 			grid-column: span 2;
-			margin: var(--space-Sm);
+			margin: var(--space-S);
 		}
 
 		.banner-phrase {
@@ -294,7 +414,7 @@
 
 	@media only screen and (min-width: 1024px) {
 		.button-Ghost {
-			margin: var(--space-Lg);
+			margin: var(--space-L);
 			margin-top: -15vh;
 			margin-bottom: -15vh;
 		}

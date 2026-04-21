@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
 	let { user, profiles } = $derived(data);
+
 	let showMessageBox = $state(false);
 	let showViewed = $state(false);
 	let showFood = $state(false);
@@ -67,7 +68,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{#each data.inbox as message}
+							{#each data.inbox as message (message)}
 								<tr>
 									<td>{message.contact_point}</td>
 									<td>{message.full_name}</td>
@@ -84,7 +85,7 @@
 						</tbody>
 					</table>
 
-					{#each data.inbox as message}
+					{#each data.inbox as message (message)}
 						<!-- Mobile Stacked Layout -->
 						<div class="mobile-cards">
 							<div class="card">
@@ -144,7 +145,6 @@
 	{/if}
 </main>
 
-<!--svelte-ignore css_unused_selector -->
 <style>
 	h1 {
 		text-align: center;
@@ -157,19 +157,6 @@
 		/* justify-content: center; */
 		align-items: center;
 		margin: var(--space-Side);
-	}
-
-	/* Account  */
-	.classicForm {
-		margin: 10px auto;
-		color: var(--txt-1);
-		width: 80vw;
-	}
-
-	/* Message Box  */
-
-	.messageBox {
-		margin: 10vh auto;
 	}
 
 	.summary {
@@ -187,7 +174,7 @@
 			display: block;
 			width: fit-content;
 
-			margin: var(--space-Sm);
+			margin: var(--space-S);
 			border-collapse: collapse;
 			background-color: #1a1a1a;
 			color: var(--error);
@@ -217,7 +204,7 @@
 		margin: var(--space-Full);
 
 		@media screen and (min-width: 1024px) {
-			margin: var(--space-Sm);
+			margin: var(--space-S);
 		}
 	}
 
@@ -254,18 +241,18 @@
 		color: var(--error);
 		border: 2px solid var(--error);
 
-		& div {
+		/* & div {
 			padding: 0.5rem 0;
 			border-bottom: 1px solid var(--bg-2);
-		}
+		} */
 
 		& p {
 			margin: var(--size-1);
 		}
 
-		& div:last-child {
+		/* & div:last-child {
 			border-bottom: none;
-		}
+		} */
 
 		& button {
 			margin-top: 1rem;
@@ -289,21 +276,10 @@
 	/* Food link */
 
 	.dinner-hunt {
-		& h2,
 		p,
 		button {
 			margin: var(--space-Side);
 		}
-	}
-
-	/* Logout  */
-
-	.button-Skew {
-		display: flex;
-		padding: 0.5em 1em;
-		margin: var(--space-Side);
-		right: 0;
-		z-index: 1;
 	}
 
 	/* Responsive design */
