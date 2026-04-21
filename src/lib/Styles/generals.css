@@ -66,6 +66,24 @@ ul {
     background: var(--accent-1);
 }
 
+@media (min-width: 1024px) {
+h1 {
+    font-size: var(--size-7);
+}
+
+h2 {
+    font-size: var(--size-6);
+}
+
+h3 {
+    font-size: var(--size-5);
+}
+
+p {
+	font-size: var(--size-4); 
+}
+} 
+
 /* :is(h1, h2, h3, h4, p, .marg_Also) {
     margin: var(--space-Qtr);
 }

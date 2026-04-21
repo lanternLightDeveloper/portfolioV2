@@ -1,4 +1,4 @@
-<svg class="Logo_Svg" viewBox="0 0 358 609" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="Logo_Svg" viewBox="30 245 250 500" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M 132.00,10.00
            C 132.00,10.00 184.00,10.00 184.00,10.00

@@ -145,7 +145,7 @@
 		</p>
 	</section>
 
-	<section>
+	<section class="grid-Block-Double">
 		<h2>Services:</h2>
 		<p>
 			Every project is unique, and pricing varies based on scope and complexity. My goal is to
@@ -214,8 +214,8 @@
 						brand and message.
 					</p>
 					<p>
-						<strong>Development:</strong> Your website will be built from the ground up, tailored to
-						your specifications.
+						<strong>Development:</strong> Your website will be built from the ground up, tailored to your
+						specifications.
 					</p>
 					<p>
 						<strong>Testing:</strong> Every detail will be tested across different devices and browsers
@@ -235,52 +235,38 @@
 				</section>
 			{/if}
 		</div>
+	</section>
 
-		<section class="grid-Block-Double">
-			<img src={ItsMe} alt="its my face" class="face" />
+	<h2 class="grid-Block-Double">Check out some of my projects:</h2>
+	<section class=" projects">
+		<img src={FairSite} alt="Kitsap County Fair project screenshot" />
+		<h4>County Fair</h4>
+		<p>
+			This is a project I used for getting up to date with different styling updates and data
+			techniques.
+		</p>
+		<a class="btn-Pulse" href="https://newfaircity.netlify.app/">Check it out</a>
+		<a class="btn-Pulse" href="/Projects/NewFairCity/">Read about this project</a>
+	</section>
 
-			<h2>About Me</h2>
-			<p>
-				I’ve spent over seven years studying and building websites, including the last few years
-				where I worked at a software company learing the layers of project development. Now, I’m
-				focused on putting my skills to work for people who want to make a difference in their
-				curent life.
-			</p>
+	<section class="right-Align projects">
+		<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
+		<h4>3D Portfolio Website</h4>
+		<p>
+			I spent some time building this websites replacement in 3d. It is fully functioning. There are
+			just a few things to work out.
+		</p>
+		<a class="btn-Pulse" href="https://threedlight.netlify.app/">Check it out</a>
+	</section>
 
-			<p>Click <a href="/About">here</a> to learn more about me.</p>
-		</section>
-
-		<h2 class="grid-Block-Double">Check out some of my projects:</h2>
-		<section class=" projects">
-			<img src={FairSite} alt="Kitsap County Fair project screenshot" />
-			<h4>County Fair</h4>
-			<p>
-				This is a project I used for getting up to date with different styling updates and data
-				techniques.
-			</p>
-			<a class="btn-Pulse" href="https://newfaircity.netlify.app/">Check it out</a>
-			<a class="btn-Pulse" href="/Projects/NewFairCity/">Read about this project</a>
-		</section>
-
-		<section class="right-Align projects">
-			<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
-			<h4>3D Portfolio Website</h4>
-			<p>
-				I spent some time building this websites replacement in 3d. It is fully functioning. There
-				are just a few things to work out.
-			</p>
-			<a class="btn-Pulse" href="https://threedlight.netlify.app/">Check it out</a>
-		</section>
-
-		<section class=" projects">
-			<img src={RandReci} alt="Table Tango project screenshot" />
-			<h4>Table Tango</h4>
-			<p>
-				I got tired of trying to figure out dinner. So I made a random meal generator to get better
-				at learning how to display fetched data.
-			</p>
-			<a class="btn-Pulse" href="https://table-tango.netlify.app/">Check it out</a>
-		</section>
+	<section class=" projects">
+		<img src={RandReci} alt="Table Tango project screenshot" />
+		<h4>Table Tango</h4>
+		<p>
+			I got tired of trying to figure out dinner. So I made a random meal generator to get better at
+			learning how to display fetched data.
+		</p>
+		<a class="btn-Pulse" href="https://table-tango.netlify.app/">Check it out</a>
 	</section>
 </main>
 
@@ -322,10 +308,7 @@
 
 	.phrase {
 		text-decoration: underline;
-		font-size: var(--size-7);
 		animation: slideUp 2s infinite;
-		padding: 0;
-		margin: 0;
 	}
 
 	@keyframes slideUp {
@@ -379,13 +362,22 @@
 		img {
 			margin-bottom: -10vh;
 		}
+
+		@media only screen and (min-width: 768px) {
+			img {
+				width: 70vw;
+				margin-bottom: -30vh;
+			}
+		}
+
+		@media only screen and (min-width: 1024px) {
+			img {
+				width: 50vw;
+				max-height: 350px;
+			}
+		}
 	}
 
-	.face {
-		width: 60vw;
-		margin-left: 20vw;
-		margin-bottom: -15vh;
-	}
 	/* Tablet  SIze  */
 	@media only screen and (min-width: 766px) {
 		header {
@@ -418,6 +410,12 @@
 			margin-top: -15vh;
 			margin-bottom: -15vh;
 		}
+
+		.banner-phrase {
+			p {
+				font-size: var(--size-7);
+			}
+		}
 	}
 
 	/* Big screens */
@@ -426,11 +424,6 @@
 			padding: 0;
 			margin: var(--space-Side);
 			grid-row: span 2;
-		}
-
-		.banner-phrase {
-			font-size: var(--size-8);
-			margin-top: -25vh;
 		}
 	}
 </style>

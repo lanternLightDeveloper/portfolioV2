@@ -80,8 +80,7 @@
 			background 0.3s ease;
 
 		svg {
-			width: 90%;
-			margin: -3vh 0 0 1.5vw;
+			width: 60%;
 			padding: 0;
 		}
 	}
