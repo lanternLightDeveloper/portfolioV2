@@ -1,0 +1,95 @@
+Joel Rivers
+Full stack developer
+Bremerton, Wa
+
+E: Joelkrivers@yahoo.com
+
+Website: Lanternlightdevelopment.com
+Github : Lanternlightdeveloper
+P: (360) 689 - 1080
+
+Summary
+----------------
+I have built websites for eight years as a frontend focused developer. Three and a half of those year's was spent working at a company that made software for debt collection agencies. 
+
+Work History
+----------------------
+Dec 2021 to Jun 2025 – Debt$Net:
+Sql structured database management for clients
+Software issue resolution
+Crisis de-escalation
+
+Debt$Net is a software built with Visual FoxPro and MySql for Windows. As part of the support team I was the first person at the phone for issue's with systems and databases. From "Oh no, I messed up and changed all of the dates in the initial_in column" to "every day we log in, yesterdays work is gone". When the world was not on fire I learned coding through hands on problem solving such as working on a team to fix an Experian Api connection issue or writing scripts in Visual FoxPro to transfer data from a file into the customer's database.
+
+2017 to 2021 – Sales:
+Consumer interests
+Design aesthetics
+Human relations
+
+2014 - 2021 Culinary Industry:
+Task managment
+Team goal setting
+Time efficiency
+
+Projects
+----------------
+ConToTheCrete.com:
+Con-Crete the rappers website for merch and ticket sales.
+Netlify + Svelte + Square
+Sales point for Cd and clothing sales
+Concert data 
+Fan Gallery 
+
+LanterLightDevelopment.com:
+My personal page for freelance web development.
+Coolify + Svelte + Supabase
+Login and message system 
+Contact points
+
+Tester.LanterLightDevelopment.com:
+A recipe randomizer for messing with login systems and databases.
+Table-Tango
+Coolify + Svelte + PostgreSQL
+Login
+Users/ Admin
+Recipe randomizer/cookbook
+recipe favorite/dislike button
+Recipe submission
+User levels for admin/moderator/user/guest
+
+A larger list of projects can be found at my github account: github.com/lanternLightDeveloper
+
+Languages & Tools
+------------------------------
+Semantic HTML/CSS   | 8 Years
+Node.js                         | 8 Years
+JavaScript                    | 7 Years
+Accessability                | 7 Years
+Git                                 | 6 Years
+Svelte                           | 6 Years
+Three.js                        | 4 Years
+Visual FoxPro               | 4 Years
+MySql                           | 4 Years
+Threlte                          | 3 Years
+React                            | 3 Years
+PostgresSQL                | 2 Years
+
+Traits
+-----------
+Kindness
+Dependability
+Perseverance
+Communicative
+Moldable
+Curious
+Aware
+Composed
+Strategic
+
+Goal
+----------
+Continue refining my development workflow to deliver clean, maintainable code from the first commit. I am actively seeking a team to learn from while building confidence across all phases of production in collaborative environments.
+
+References
+-----------------
+References are available upon request.
