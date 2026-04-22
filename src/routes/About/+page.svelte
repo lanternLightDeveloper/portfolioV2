@@ -43,43 +43,25 @@
 	</p>
 
 	<img src={Nature1} alt="a sunny day on top of a mountain at a lake. It is serene" />
-
-	<p>And a more resume version of myself</p>
-
-	<section id="about">
-		<p>
-			Resilient developer with 5+ years of experience in front-end design and full stack
-			development. Known for strong teamwork, communication, and problem-solving. Passionate about
-			building collaborative environments and refining tools that minimize time to market.
-		</p>
-	</section>
-
-	<section id="contact">
-		<h2>Contact</h2>
-		<ul>
-			<li>Email: <a href="mailto:Joelkrivers@yahoo.com">Joelkrivers@yahoo.com</a></li>
-			<li>
-				Website: <a href="https://lanternlightdevelopment.com" target="_blank"
-					>Lanternlightdevelopment.com</a
-				>
-			</li>
-			<li>
-				GitHub: <a href="https://github.com/Lanternlightdeveloper" target="_blank"
-					>Lanternlightdeveloper</a
-				>
-			</li>
-		</ul>
-	</section>
 </main>
 
 <style>
-	img {
-		width: 60%;
-		margin: 0 20%;
+	main {
+		margin: var(--size-6);
+
+		@media (min-width: 1024px) {
+			width: 60vw;
+			margin-left: 20vw;
+		}
+
+		@media (min-width: 1440px) {
+			width: 40vw;
+			margin-left: 30vw;
+		}
 	}
 
-	ul {
-		margin-left: 10%;
+	img {
+		width: 100%;
 	}
 
 	/* Tablet Size */

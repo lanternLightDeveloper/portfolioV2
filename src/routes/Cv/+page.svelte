@@ -1,3 +1,19 @@
+<script>
+	function handleMove(e) {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+
+		e.currentTarget.style.setProperty('--x', `${x}px`);
+		e.currentTarget.style.setProperty('--y', `${y}px`);
+		e.currentTarget.style.setProperty('--glow-opacity', 1);
+	}
+
+	function handleLeave(e) {
+		e.currentTarget.style.setProperty('--glow-opacity', 0);
+	}
+</script>
+
 <main class="cv">
 	<section class="hero">
 		<h1>Joel Rivers</h1>
@@ -8,53 +24,13 @@
 		</p>
 	</section>
 
-	<section class="card">
-		<h2>Tech Skill's & tools</h2>
-		<div class="skills">
-			<span>Semantic HTML/CSS (8 yrs)</span>
-			<span>Node.js (8 yrs)</span>
-			<span>JavaScript (7 yrs)</span>
-			<span>Accessibility (7 yrs)</span>
-			<span>Git (6 yrs)</span>
-			<span>Svelte (6 yrs)</span>
-			<span>Three.js (4 yrs)</span>
-			<span>Visual FoxPro (4 yrs)</span>
-			<span>MySQL (4 yrs)</span>
-			<span>React (3 yrs)</span>
-			<span>PostgreSQL (2 yrs)</span>
-			<span>Figma (2 yrs)</span>
-		</div>
-	</section>
-
-	<section class="card">
-		<h2>Projects</h2>
-		<ul class="projects">
-			<strong>Lanternlightdevelopment.com</strong>
-			<p>My personal page for freelance web development.</p>
-			<li>Coolify + Svelte + Supabase</li>
-			<li>Login and message system</li>
-			<li>Contact points</li>
-			<strong><a href="https://ConToTheCrete.com">ConToTheCrete.com</a></strong>
-			<p>Con-Crete the rappers website for merch and ticket sales.</p>
-			<li>Netlify + Svelte + Square</li>
-			<li>Sales point for Cd and clothing sales</li>
-			<li>Concert data</li>
-			<li>Fan Gallery</li>
-
-			<strong><a href="https://table-tango.netlify.app/">Table Tango</a></strong>
-			<p>A recipe randomizer for messing with login systems and databases.</p>
-			<li>Coolify + Svelte + PostgreSQL</li>
-			<li>Login</li>
-			<li>Users/ Admin</li>
-			<li>Recipe randomizer/cookbook</li>
-			<li>recipe favorite/dislike button</li>
-			<li>Recipe submission</li>
-			<li>User levels for admin/moderator/user/guest</li>
-		</ul>
-	</section>
-
-	<section class="card">
-		<h2>Work History</h2>
+	<section
+		class="card"
+		on:mousemove={handleMove}
+		on:mouseleave={handleLeave}
+		aria-labelledby="work-history"
+	>
+		<h2 id="work-history">Work History</h2>
 
 		<article>
 			<h3>DebtNet <span>(2021 – 2025)</span></h3>
@@ -93,18 +69,137 @@
 		</article>
 	</section>
 
-	<section class="card">
-		<h2>Strengths</h2>
-		<ul class="traits">
-			<li>Dependability</li>
-			<li>Communication</li>
-			<li>Kindness</li>
-			<li>Perseverance</li>
-			<li>Moldable</li>
-			<li>Curious</li>
-			<li>Aware</li>
-			<li>Composed</li>
-			<li>Strategic</li>
+	<section class="card traits-focus">
+		<ul class="traits" on:mousemove={handleMove} on:mouseleave={handleLeave}>
+			<h2>Strengths</h2>
+			{#each ['Dependability', 'Communication', 'Kindness', 'Perseverance', 'Moldable', 'Curious', 'Aware', 'Composed'] as trait (trait)}
+				<li>{trait}</li>
+			{/each}
+		</ul>
+	</section>
+
+	<section
+		class="card"
+		on:mousemove={handleMove}
+		on:mouseleave={handleLeave}
+		aria-labelledby="skills-tools"
+	>
+		<h2 id="skills-tools">Tech Skill's & tools</h2>
+
+		<div class="skills-graph">
+			<div class="skill" style="--level: 8">
+				<span>Semantic HTML/CSS</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 8">
+				<span>Node.js</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 7">
+				<span>JavaScript</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 7">
+				<span>Accessibility</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 6">
+				<span>Git</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 6">
+				<span>Svelte</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 4">
+				<span>Three.js</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 4">
+				<span>Visual FoxPro</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 4">
+				<span>MySQL</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 3">
+				<span>React</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 2">
+				<span>PostgreSQL</span>
+				<div class="bar"></div>
+			</div>
+
+			<div class="skill" style="--level: 2">
+				<span>Figma</span>
+				<div class="bar"></div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="card"
+		on:mousemove={handleMove}
+		on:mouseleave={handleLeave}
+		aria-labelledby="projects-heading"
+	>
+		<h2 id="projects-heading">Projects</h2>
+
+		<ul class="projects">
+			<li>
+				<h3>
+					<a class="btn btn-rise" href="https://lanternlightdevelopment.com">
+						Lanternlightdevelopment.com
+					</a>
+				</h3>
+				<p>My personal page for freelance web development.</p>
+				<ul>
+					<li>Coolify + Svelte + Supabase</li>
+					<li>Login and message system</li>
+					<li>Contact points</li>
+				</ul>
+			</li>
+
+			<li>
+				<h3>
+					<a class="btn btn-rise" href="https://contothecrete.com"> ConToTheCrete.com </a>
+				</h3>
+				<p>Con-Crete the rapper's website for merch and ticket sales.</p>
+				<ul>
+					<li>Netlify + Svelte + Square</li>
+					<li>Sales point for CD and clothing sales</li>
+					<li>Concert data</li>
+					<li>Fan Gallery</li>
+				</ul>
+			</li>
+
+			<li>
+				<h3>
+					<a class="btn btn-rise" href="https://table-tango.netlify.app/"> Table Tango </a>
+				</h3>
+				<p>A recipe randomizer for messing with login systems and databases.</p>
+				<ul>
+					<li>Coolify + Svelte + PostgreSQL</li>
+					<li>Login</li>
+					<li>Users/Admin</li>
+					<li>Recipe randomizer/cookbook</li>
+					<li>Favorites/dislikes</li>
+					<li>Recipe submission</li>
+					<li>User roles</li>
+				</ul>
+			</li>
 		</ul>
 	</section>
 </main>
@@ -137,32 +232,127 @@
 		padding: 1.5rem;
 		border-radius: var(--radius-S);
 		background: var(--bg-2);
+		position: relative;
+		overflow: hidden;
+		perspective: 800px;
+		cursor: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+
+			background: radial-gradient(
+				100px circle at var(--x) var(--y),
+				var(--accent-1),
+				transparent 60%
+			);
+
+			opacity: var(--glow-opacity, 0);
+			transition:
+				opacity 0.25s ease,
+				background 0.1s;
+
+			pointer-events: none;
+		}
 	}
 
-	.skills {
+	.traits-focus {
+		padding: 0;
+		margin: 0;
+	}
+
+	.traits {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem;
+		padding: 1.5rem;
+		margin: 0;
+		perspective: 800px;
+		cursor: none;
+
+		li {
+			list-style: none;
+			padding: 1rem;
+			border-radius: 14px;
+			border: var(--border-2);
+			text-align: center;
+			transform-style: preserve-3d;
+			transition:
+				transform 0.25s ease,
+				background 0.25s ease,
+				color 0.25s ease,
+				opacity 0.25s ease,
+				box-shadow 0.25s ease;
+
+			&&:hover {
+				opacity: 1;
+				filter: blur(0);
+
+				background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+				transform: translateZ(20px) rotateX(3deg) rotateY(-7deg) scale(1.08);
+			}
+		}
+
+		&:hover li {
+			opacity: 0.25;
+			filter: blur(1px);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+
+			background: radial-gradient(
+				100px circle at var(--x) var(--y),
+				var(--accent-1),
+				transparent 60%
+			);
+
+			opacity: var(--glow-opacity, 0);
+			transition:
+				opacity 0.25s ease,
+				background 0.1s;
+
+			pointer-events: none;
+		}
+	}
+
+	.skills-graph {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
+		flex-direction: column;
+		gap: 0.8rem;
 	}
 
-	.skills span {
-		background: var(--bg-1);
-		padding: 0.4rem 0.7rem;
-		border: var(--border);
-		border-radius: 6px;
+	.skill {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
 		font-size: 0.9rem;
 	}
 
-	.projects li {
-		margin-bottom: 1rem;
+	.skill span {
+		display: flex;
+		justify-content: space-between;
 	}
 
-	.projects p {
-		margin: 0.3rem 0 0;
+	.bar {
+		height: 6px;
+		background: var(--bg-1);
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
 	}
 
-	.projects a {
-		text-shadow: var(--shadow-Txt);
+	.bar::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		width: calc(var(--level) * 12.5%);
+		background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+		border-radius: 4px;
+		transition: width 0.6s ease;
 	}
 
 	article {
@@ -180,16 +370,15 @@
 		font-weight: normal;
 	}
 
-	.traits {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
+	.projects li {
+		margin-bottom: 1rem;
 	}
 
-	.traits li {
-		background: var(--bg-1);
-		padding: 0.4rem 0.7rem;
-		border-radius: 6px;
-		border: var(--border);
+	.projects p {
+		margin: 0.3rem 0 0;
+	}
+
+	.projects a {
+		text-shadow: var(--shadow-Txt);
 	}
 </style>

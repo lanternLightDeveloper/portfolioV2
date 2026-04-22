@@ -12,10 +12,11 @@
 	<!-- <meta name="twitter:card" content="$lib/img/backHero29.png" /> -->
 </svelte:head>
 
-<header class="head_Line"></header>
+<header class=" head_Line">
+	<h1>Services:</h1>
+</header>
 
 <main>
-	<h1>Services:</h1>
 	<h2>Pricing Tiers</h2>
 	<p>
 		Every project is unique, and pricing varies based on scope and complexity. My goal is to deliver
@@ -64,8 +65,8 @@
 			highest standard. Here's what to expect:
 		</p>
 		<p>
-			<strong>Planning:</strong> We’ll discuss your goals, brainstorm ideas, and create a clear plan
-			for your website.
+			<strong>Planning:</strong> We’ll discuss your goals, brainstorm ideas, and create a clear plan for
+			your website.
 		</p>
 		<p>
 			<strong>Design:</strong> I’ll craft a layout, color palette, and design that reflect your brand
@@ -75,8 +76,8 @@
 			<strong>Development:</strong> Your website will be built from the ground up, tailored to your specifications.
 		</p>
 		<p>
-			<strong>Testing:</strong> Every detail will be tested across different devices and browsers to
-			ensure it works seamlessly.
+			<strong>Testing:</strong> Every detail will be tested across different devices and browsers to ensure
+			it works seamlessly.
 		</p>
 		<p>
 			<strong>Deployment:</strong> Your website goes live and is ready to make an impact!
@@ -91,3 +92,13 @@
 		</p>
 	</section>
 </main>
+
+<style>
+	main {
+		margin: var(--size-6);
+
+		@media (min-width: 1024px) {
+			margin: var(--space-L);
+		}
+	}
+</style>

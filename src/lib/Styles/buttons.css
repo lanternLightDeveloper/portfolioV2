@@ -110,7 +110,7 @@
 	color: var(--txt-2	);
 	padding: var(--size-4);
 	text-align: center;
-	text-decoration: none;
+	text-decoration: underline;
 	display: inline-block;
 	cursor: pointer;
 
@@ -279,4 +279,203 @@
 	span {
 		position: relative; 
 	}
+}
+
+.btn-14 { 
+	background: #000; 
+	color: white; 
+	border: 2px dashed #fff; 
+} 
+
+.btn-14:hover { 
+	border-style: solid; 
+} 
+
+.btn-13 { 
+	background: #111; 
+	color: white; 
+	filter: blur(0); 
+	transition: filter 0.3s; 
+} 
+
+.btn-13:hover { 
+	filter: blur(1px); 
+} 
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.9rem 1.8rem;
+	border-radius: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	overflow: hidden;
+	isolation: isolate;
+	border: none;
+}
+
+.btn-9 { 
+	color: #0ff; 
+	border: 1px solid #0ff; 
+	text-shadow: 0 0 5px #0ff; 
+} 
+
+.btn-9:hover { 
+	animation: flicker 0.2s infinite alternate; 
+} 
+
+@keyframes flicker { 
+	from { opacity: 1; } to { opacity: 0.7; } 
+} 
+
+.btn-fluid {
+	color: white;
+	background: linear-gradient(270deg, #00f0ff, #7b2cff, #00f0ff);
+	background-size: 400% 400%;
+	animation: drift 6s ease infinite;
+}
+
+.btn-fluid:hover {
+	filter: brightness(1.2);
+}
+
+@keyframes drift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.btn-core {
+	color: white;
+	background: radial-gradient(circle, #0ff 0%, #111 60%);
+}
+
+.btn-core::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle, rgba(0,255,255,0.5), transparent);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.btn-core:hover::before {
+	opacity: 1;
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.2); }
+	100% { transform: scale(1); }
+}
+
+.btn-sweep {
+	background: #222;
+	color: white;
+}
+
+.btn-sweep::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -75%;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+	transform: skewX(-20deg);
+}
+
+.btn-sweep:hover::after {
+	animation: sweep 0.8s forwards;
+}
+
+@keyframes sweep {
+	to { left: 125%; }
+}
+
+.btn-split {
+	color: white;
+	background: #111;
+	border: 1px solid transparent;
+}
+
+.btn-split::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 1px;
+	background: linear-gradient(90deg, #0ff, #f0f);
+	mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	mask-composite: exclude;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.btn-split:hover::before {
+	opacity: 1;
+}
+
+.btn-rise {
+	background: transparent;
+	color: white;
+	border: 2px dotted black;
+}
+
+.btn-rise::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: white;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+	z-index: -1;
+}
+
+.btn-rise:hover::before {
+	transform: translateY(0);
+	
+}
+
+.btn-rise:hover {
+	color: black;
+	border: 2px solid black;
+}
+
+.btn-rgb {
+	background: black;
+	color: white;
+}
+
+.btn-rgb:hover {
+	text-shadow:
+		1px 0 red,
+		-1px 0 cyan;
+}
+
+
+.btn-warp {
+	background: #111;
+	color: white;
+}
+
+.btn-warp::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle, #fff 10%, transparent 70%);
+	transform: scale(0);
+	transition: transform 0.4s ease;
+	z-index: -1;
+}
+
+.btn-warp:hover::before {
+	transform: scale(2);
+}
+
+.btn-warp:hover {
+	color: black;
 }

@@ -65,7 +65,7 @@
 			<label for="message">Message</label>
 			<textarea id="message" name="message" placeholder="Enter your message" required></textarea>
 
-			<button class="button-Ghost" type="submit">Submit</button>
+			<button class="btn-Ghost" type="submit">Submit</button>
 		</form>
 	{:else}
 		<p>Thank you for the message! I will get back to you as soon as I can.</p>
@@ -79,6 +79,20 @@
 </main>
 
 <style>
+	main {
+		height: 90vh;
+	}
+
+	form {
+		@media (min-width: 1024px) {
+			width: 60vw;
+		}
+
+		@media (min-width: 1440px) {
+			width: 40vw;
+		}
+	}
+
 	/* Reflective Follow  */
 	.follow {
 		display: flex;
