@@ -264,7 +264,7 @@
 
 	.traits {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 0.75rem;
 		padding: 1.5rem;
 		margin: 0;
@@ -316,6 +316,10 @@
 				background 0.1s;
 
 			pointer-events: none;
+		}
+
+		@media only screen and (min-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 

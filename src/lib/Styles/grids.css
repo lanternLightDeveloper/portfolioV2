@@ -30,10 +30,8 @@
 
 		p, h2, h3, h4 {
 			padding: var(--size-4);
-			text-shadow: var(--shadow-Txt);
-            background-color: var(--hallow); 
-            backdrop-filter: blur(4px);
-            --webkit-backdrop-filter: blur(1.5px);
+			/* text-shadow: var(--shadow-Txt); */
+			font-weight: 500;
 		}
         
         img {

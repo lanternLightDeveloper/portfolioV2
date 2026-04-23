@@ -29,6 +29,15 @@
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
+
+	let theme = $state('dark');
+	const themes = ['dark', 'light', 'colorblind', 'headache'];
+
+	function setTheme(newTheme) {
+		theme = newTheme;
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+	}
 </script>
 
 <div>
@@ -53,6 +62,14 @@
 						{item.label}
 					</a>
 				{/each}
+
+				<div class="theme-picker">
+					{#each themes as t (t)}
+						<button class="btn btn-Wave" class:selected={theme === t} onclick={() => setTheme(t)}>
+							{t}
+						</button>
+					{/each}
+				</div>
 			</div>
 		</div>
 	{/if}
@@ -148,6 +165,10 @@
 		to {
 			opacity: 1;
 		}
+	}
+
+	.theme-picker button.selected {
+		outline: 2px solid var(--accent-1);
 	}
 
 	.scroll-top-button {

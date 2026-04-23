@@ -1,8 +1,7 @@
 <script>
-	import FairSite from '$lib/img/fairSite.png';
+	import ConToTheCrete from '$lib/img/contothecrete.png';
 	import TreeDfolio from '$lib/img/treedfoli.png';
 	import RandReci from '$lib/img/food.png';
-	import ItsMe from '$lib/img/myFace.jpg';
 	import { enhance } from '$app/forms';
 	import { onDestroy } from 'svelte';
 
@@ -129,7 +128,6 @@
 		</p>
 		<a href="/Contact" class="contact button-Ghost">Reach out</a>
 		<ul>
-			<!-- This could be a 3d neon sign with an open/closed feature -->
 			Hours of Operation:
 			<li>Monday-Friday: 7:30am-6pm (Pst)</li>
 			<li>Saturday & Sunday: Closed</li>
@@ -239,19 +237,18 @@
 
 	<h2 class="grid-Block-Double">Check out some of my projects:</h2>
 	<section class=" projects">
-		<img src={FairSite} alt="Kitsap County Fair project screenshot" />
-		<h4>County Fair</h4>
+		<h4>Con to the Crete.com</h4>
+		<img src={ConToTheCrete} alt="Con-crete the rapper's project screenshot" />
 		<p>
-			This is a project I used for getting up to date with different styling updates and data
-			techniques.
+			A friend is a rapper who has created music for years. I made this for him to deal with merch
+			sales and tour dates.
 		</p>
-		<a class="btn-Pulse" href="https://newfaircity.netlify.app/">Check it out</a>
-		<a class="btn-Pulse" href="/Projects/NewFairCity/">Read about this project</a>
+		<a class="btn-Pulse" href="https://contothecrete.com/">Check it out</a>
 	</section>
 
 	<section class="right-Align projects">
-		<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
 		<h4>3D Portfolio Website</h4>
+		<img src={TreeDfolio} alt="3D Portfolio Website project screenshot" />
 		<p>
 			I spent some time building this websites replacement in 3d. It is fully functioning. There are
 			just a few things to work out.
@@ -260,13 +257,15 @@
 	</section>
 
 	<section class=" projects">
-		<img src={RandReci} alt="Table Tango project screenshot" />
 		<h4>Table Tango</h4>
+		<img src={RandReci} alt="Table Tango project screenshot" />
 		<p>
-			I got tired of trying to figure out dinner. So I made a random meal generator to get better at
-			learning how to display fetched data.
+			I got tired of trying to figure out dinner. So I made a random meal generator. The initial
+			version had a file full of recipes. V2 now has a login system that I made so people can
+			favorite or dislike recipes. There is also user levels so people can gain the ability to
+			submit recipes.
 		</p>
-		<a class="btn-Pulse" href="https://table-tango.netlify.app/">Check it out</a>
+		<a class="btn-Pulse" href="https://tester.lanternlightdevelopment.com/">Check it out</a>
 	</section>
 </main>
 
@@ -349,6 +348,15 @@
 		border-bottom: var(--border);
 		min-height: 25vh;
 		margin-bottom: 5vh;
+
+		p,
+		h4 {
+			padding: var(--size-4);
+			font-weight: 500;
+			background-color: var(--hallow);
+			backdrop-filter: blur(4px);
+			--webkit-backdrop-filter: blur(1.5px);
+		}
 
 		h4 {
 			border-bottom: var(--border);
